@@ -26,6 +26,11 @@ const HeaderContainer = styled.header`
   z-index: 1000;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   animation: ${fadeIn} 1.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
 `;
 
 const Logo = styled.div`
@@ -35,6 +40,11 @@ const Logo = styled.div`
   background: linear-gradient(90deg, #7F00FF, #E100FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -42,6 +52,17 @@ const Nav = styled.nav`
     list-style: none;
     display: flex;
     gap: 20px;
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   li {
@@ -77,6 +98,22 @@ const Nav = styled.nav`
       width: 100%;
       left: 0;
     }
+
+    @media (max-width: 768px) {
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0;
+    }
+  }
+
+  a span {
+    display: none;
+
+    @media (min-width: 481px) {
+      display: inline;
+    }
   }
 `;
 
@@ -86,13 +123,13 @@ const Header = () => {
       <Logo>Dinesh Aragonda</Logo>
       <Nav>
         <ul>
-          <li><a href="#about"><FaUser /> About</a></li>
-          <li><a href="#projects"><FaProjectDiagram /> Projects</a></li>
-          <li><a href="#skills"><FaTools /> Skills</a></li>
-          <li><a href="#achievements"><FaTrophy /> Achievements</a></li>
-          <li><a href="#education"><FaGraduationCap /> Education</a></li>
-          <li><a href="#por"><FaClipboardList /> POR</a></li>
-          <li><a href="#contact"><FaEnvelope /> Contact</a></li>
+          <li><a href="#about"><FaUser /><span> About</span></a></li>
+          <li><a href="#projects"><FaProjectDiagram /><span> Projects</span></a></li>
+          <li><a href="#skills"><FaTools /><span> Skills</span></a></li>
+          <li><a href="#achievements"><FaTrophy /><span> Achievements</span></a></li>
+          <li><a href="#education"><FaGraduationCap /><span> Education</span></a></li>
+          <li><a href="#por"><FaClipboardList /><span> POR</span></a></li>
+          <li><a href="#contact"><FaEnvelope /><span> Contact</span></a></li>
         </ul>
       </Nav>
     </HeaderContainer>

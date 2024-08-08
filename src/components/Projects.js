@@ -99,40 +99,40 @@ const ProjectLink = styled.a`
 const Projects = () => {
   const projects = [
     {
-      title: 'Book Search Website',
-      description: 'A personalized book search project with an advanced cache system for fast search results.',
-      technologies: 'HTML, CSS, JavaScript, ReactJS, Redux',
-      link: 'https://github.com/Dinesh-aragonda/Book-Search-Website'
+      title: 'Code Tracker',
+      description: 'A project tracking tool to help developers keep track of their coding activities and progress.',
+      technologies: 'HTML, CSS, JavaScript, ReactJS, Node.js, MongoDB',
+      link: 'https://github.com/Dinesh-aragonda-79/Code-Tracker'
     },
     {
-      title: 'Portfolio Website',
-      description: 'A personal portfolio website to showcase projects and skills.',
+      title: 'Canteen Wallah',
+      description: 'A food delivery app with features for user and admin logins, focusing on seamless user experience.',
+      technologies: 'HTML, CSS, JavaScript, ReactJS, Node.js, MongoDB',
+      link: 'https://github.com/Dinesh-aragonda-79/Canteen-Wallah'
+    },
+    {
+      title: 'Chatting App',
+      description: 'A real-time chat application with multiple chat rooms and user authentication.',
+       technologies: 'HTML, CSS, JavaScript, ReactJS, Node.js, MongoDB',
+      link: 'https://github.com/Dinesh-aragonda-79/Chatting-App'
+    },
+    {
+      title: 'Tech News',
+      description: 'A platform to get the latest technology news from various sources, presented in an intuitive interface.',
       technologies: 'HTML, CSS, JavaScript, ReactJS',
-      link: 'https://github.com/Dinesh-aragonda/Portfolio'
+      link: 'https://github.com/Dinesh-aragonda-79/Tech-News'
     },
     {
-      title: 'Weather App',
-      description: 'A weather forecasting app providing accurate and real-time weather updates.',
+      title: 'Attendance Manager',
+      description: 'An application to manage and track attendance for students or employees, with detailed reports.',
+       technologies: 'HTML, CSS, JavaScript, ReactJS',
+      link: 'https://github.com/Dinesh-aragonda-79/Attendance-manager-app'
+    },
+    {
+      title: 'Advanced ToDo List',
+      description: 'A feature-rich to-do list app to manage tasks with priorities, deadlines, and reminders.',
       technologies: 'HTML, CSS, JavaScript, ReactJS',
-      link: 'https://github.com/Dinesh-aragonda/Weather-App'
-    },
-    {
-      title: 'To-Do List App',
-      description: 'A simple and efficient to-do list app to manage daily tasks and boost productivity.',
-      technologies: 'HTML, CSS, JavaScript, ReactJS',
-      link: 'https://github.com/Dinesh-aragonda/ToDo-List-App'
-    },
-    {
-      title: 'E-commerce Website',
-      description: 'An online store platform for seamless shopping experience with various product categories.',
-      technologies: 'HTML, CSS, JavaScript, ReactJS, Redux',
-      link: 'https://github.com/Dinesh-aragonda/E-commerce-Website'
-    },
-    {
-      title: 'Chat Application',
-      description: 'A real-time chat application with support for multiple chat rooms and user authentication.',
-      technologies: 'HTML, CSS, JavaScript, ReactJS, Firebase',
-      link: 'https://github.com/Dinesh-aragonda/Chat-Application'
+      link: 'https://github.com/Dinesh-aragonda-79/Advanced-ToDo-List'
     }
   ];
 

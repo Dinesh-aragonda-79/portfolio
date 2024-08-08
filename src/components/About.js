@@ -23,6 +23,12 @@ const AboutSection = styled.section`
   flex-wrap: wrap;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 1024px) {
+    padding: 30px 15px;
+    margin-top: 30px;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -30,9 +36,23 @@ const TextContainer = styled.div`
   margin-bottom: 20px;
   max-width: 600px;
   padding-right: 20px;
+  animation: fadeInLeft 1.5s ease-in-out;
+
   @media (max-width: 768px) {
     padding-right: 0;
     text-align: center;
+    max-width: 100%;
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 `;
 
@@ -45,6 +65,14 @@ const Name = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2em;
+  }
 `;
 
 const Title = styled.h2`
@@ -54,6 +82,14 @@ const Title = styled.h2`
   font-family: 'Poppins', sans-serif;
   ${gradientText}
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5em;
+  }
 `;
 
 const Description = styled.p`
@@ -62,6 +98,14 @@ const Description = styled.p`
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #b3b3b3;
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9em;
+  }
 `;
 
 const Button = styled.a`
@@ -75,11 +119,12 @@ const Button = styled.a`
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   margin: 10px 5px 20px 0;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     background: linear-gradient(90deg, #E100FF, #7F00FF);
     transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(225, 0, 255, 0.5);
   }
 
   svg {
@@ -91,9 +136,21 @@ const SocialLinks = styled.div`
   display: flex;
   justify-content: start;
   margin-top: 20px;
+  animation: fadeInUp 1.5s ease-in-out;
 
   @media (max-width: 768px) {
     justify-content: center;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `;
 
@@ -106,6 +163,11 @@ const SocialLink = styled.a`
   &:hover {
     color: #E100FF;
   }
+
+  @media (max-width: 480px) {
+    font-size: 1.2em;
+    margin: 0 8px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -114,6 +176,18 @@ const ImageContainer = styled.div`
   align-items: center;
   padding: 20px;
   position: relative;
+  animation: fadeInRight 1.5s ease-in-out;
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 `;
 
 const ProfileImage = styled.img`
@@ -137,6 +211,11 @@ const ProfileImage = styled.img`
     max-width: 250px;
     height: auto;
   }
+
+  @media (max-width: 480px) {
+    margin-top: 15px;
+    max-width: 200px;
+  }
 `;
 
 const Overlay = styled.div`
@@ -158,9 +237,7 @@ const About = () => {
         <Name>Hi there, I'm Dinesh</Name>
         <Title>Competitive Programmer and ML Enthusiast</Title>
         <Description>I am a Computer Science and Engineering student at NIT Silchar.</Description>
-        <Button href="/path-to-cv.pdf" target="_blank">
-          <FaDownload /> Download CV
-        </Button>
+       
         <SocialLinks>
           <SocialLink href="https://www.linkedin.com/in/dinesh-aragonda-5795a2223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><FaLinkedin /></SocialLink>
           <SocialLink href="https://github.com/Dinesh-aragonda-79" target="_blank"><FaGithub /></SocialLink>

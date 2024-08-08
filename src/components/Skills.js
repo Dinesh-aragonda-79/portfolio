@@ -18,6 +18,12 @@ const SkillsSection = styled.section`
   padding: 60px 20px;
   background: #121212;
   animation: ${fadeIn} 2s ease-in-out;
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+  }
+  @media (max-width: 480px) {
+    padding: 30px 10px;
+  }
 `;
 
 const Title = styled.h2`
@@ -30,34 +36,48 @@ const Title = styled.h2`
   font-size: 3em;
   font-weight: bold;
   letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
+  @media (max-width: 480px) {
+    font-size: 2em;
+  }
 `;
 
 const SkillsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   justify-items: center;
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(5, 1fr);
-  }
 `;
 
 const SkillItem = styled.div`
   background: #1c1c1c;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   color: #ffffff;
-  padding: 40px 20px;
+  padding: 30px 20px;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
 
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px 10px;
   }
 `;
 
@@ -67,9 +87,27 @@ const IconWrapper = styled.div`
   display: inline-block;
 
   svg {
-    width: 100%;
-    height: 100%;
+    width: 80px; /* Ensure consistent icon size */
+    height: 80px; /* Ensure consistent icon size */
     fill: url(#icon-gradient);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+
+    svg {
+      width: 60px; /* Adjust size for smaller screens */
+      height: 60px; /* Adjust size for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2em;
+
+    svg {
+      width: 50px; /* Adjust size for smallest screens */
+      height: 50px; /* Adjust size for smallest screens */
+    }
   }
 `;
 
@@ -79,6 +117,14 @@ const SkillName = styled.span`
   background: ${gradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9em;
+  }
 `;
 
 const Skills = () => {
